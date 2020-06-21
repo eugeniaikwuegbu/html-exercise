@@ -3,42 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+    <title>My Favorite Git command</title>
 </head>
-<body>
-    <h1><strong> This is your first HTML page!</strong></h1>
-    <h2>Seems like things are going pretty well so far</h2>
-    <h6>Let's add a recipe for some delicious chocolate chip cookies</h6>
-    <p>We're going to borrow a picture from General Mills</p>
-   
-    <img src="https://www.handletheheat.com/wp-content/uploads/2018/02/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-550x550.jpg" alt="Delicious home made cookies" width="200" height="200">
+<style>
+    h1 {
+        text-align:center;
+    }
+    body {
+        background: url(https://images.pexels.com/photos/304664/pexels-photo-304664.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+        background-repeat:no-repeat;
+        background-size:2000px;
+    }
 
-  <div>
-      <p>Here is what the recipe calls for</p>
-    <p><strong>Ingredients</strong> (probably not right)</p>
-    <ul>
-        <li>6 eggs</li>
-        <li>2 cups of flour</li>
-        <li>2 teaspoons of vanila extract</li>
-        <li>2 teaspoons of baking powder</li>
-        <li>1 cup of sugar</li>
-    </ul>
-</div>
-<div>
-    <p><strong>Instructions </strong>(may or may not be correct)</p>
-    <ol type="a">
-        <li>Add eggs, flour and vanila extract and mix</li>
-        <li>Combine with sugar and baking powder and stir</li>
-        <li>Eat half the cookie batter because it is delicious</li>
-        <li>Take the rest of the cookie batter and make cookies</li>
-        <li>Bake at 350 for 25 minutes</li>
-        <li>Enjoy!</li>
-    </ol>
-</div>
-<hr>
-<footer>
-   <p> Oh you don't trust us? You want to see the actual recipe? You can view right <a href="#"> Here</a> </p>
-</footer>
-<hr>
+</style>
+<h1><i>My Favorite Git Command</i></h1>
+<body>
+    <div>
+    <p>Let's say...Git commands are quite interesting. It is difficult to pick a favorite.
+        But I will enjoy talking about the  <strong>Git config command</strong>.</p>
+    <p>I find this command interesting cos it is very necessary to set up your repository page when using Git</p>
+    <p>Git configuration values on a global or local project level. These configuration levels correspond to 
+        .gitconfig text files. Executing git config will modify a configuration text file</p>
+    <p>There are quite a lot of flags/arguments we can use for git config... I will take some time to explain a few.</p>
+    <ol type="i">
+        <li><i><strong>--Local</strong></i>: By default, git config will write to a local level if no configuration option is passed. 
+        Local level configuration is applied to the context repository git config gets invoked in. 
+        Local configuration values are stored in a file that can be found in the repo's .git directory: .git/config.
+        </li>
+        It can be used in this format <strong><i>git config --local</i></strong>
+        <p> <img src="photo.jpg" alt="Sample of how to use git config --Local" width="400" height="250"></p>
+        <p>This prints out numerous options/actions which you can choose froom</p>
+        <br>
+        <br>
+        <li><i><strong>--Global</strong></i>: Global level configuration is user-specific, meaning it is applied to an operating
+             system user. Global configuration values are stored in a file that is located in a user's home directory.
+        ~ /.gitconfig on unix systems and C:\Users\<username>\.gitconfig on windows
+        </li>
+        It can be used in this format <strong><i>git config --global</i></strong>
+        <p> <img src="photo1.jpg" alt="Sample of how to use git config --Global" width="400" height="250"></p>
+        <p>This prints out numerous options/actions which you can choose froom</p>
+        <br>
+        <br>
+        <li><i><strong>--System</strong></i>: System-level configuration is applied across an entire machine. 
+            This covers all users on an operating system and all repos. 
+            The system level configuration file lives in a gitconfig file off the system root path. $(prefix)/etc/gitconfig on unix systems. 
+            On windows this file can be found at C:\Documents and Settings\All Users\Application Data\Git\config on Windows XP,
+            and in C:\ProgramData\Git\config on Windows Vista and newer.
+        </li>
+        It can be used in this format: <strong><i>git config --system</i></strong>
+        <p> <img src="photo2.jpg" alt="Sample of how to use git config --system" width="400" height="250"></p>
+        <p>This prints out numerous options/actions which you can choose froom</p>
+        <br>
+        <br>
+        <li><i><strong>Merge Tool</strong></i>:
+            In the event of a merge conflict, Git will launch a "merge tool." 
+            By default, Git uses an internal implementation of the common Unix diff program. The internal Git diff is a minimal merge conflict viewer. 
+            There are many external third party merge conflict resolutions that can be used instead. 
+            For an overview of various merge tools and configuration, see our guide on tips and tools to resolve conflits with Git. 
+        </li>
+        It can be used in this format: <strong><i>git config --global merge.tool kdiff3</i></strong>
+        <p> <img src="photo3.jpg" alt="Sample of how to use git config --global merge.tool kdiff3" width="400" height="250"></p>
+        <p>This prints out numerous options/actions which you can choose froom</p>
+        </ol>
+    </div>
 </body>
 </html>
